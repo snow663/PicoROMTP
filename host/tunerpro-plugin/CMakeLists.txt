@@ -1,6 +1,10 @@
 cmake_minimum_required(VERSION 3.21)
 project(PicoROMTunerPro LANGUAGES CXX)
 
+if(NOT CMAKE_SIZEOF_VOID_P EQUAL 4)
+  message(FATAL_ERROR "TunerPro requires 32-bit plug-ins. Configure with -A Win32 or a 32-bit toolchain.")
+endif()
+
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_WINDOWS_EXPORT_ALL_SYMBOLS ON)

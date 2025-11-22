@@ -11,7 +11,7 @@ device without spawning the `picorom.exe` helper.
 ## Building (Visual Studio 2022)
 
 1. Install Visual Studio 2022 with the **Desktop development with C++** workload.
-2. Open **Developer PowerShell for VS 2022** (x64 toolchain).
+2. Open **Developer PowerShell for VS 2022** (the plug-in must be built as 32-bit/Win32 for TunerPro).
 3. From the repo root, build via MSBuild:
 
    ```powershell
@@ -20,8 +20,8 @@ device without spawning the `picorom.exe` helper.
 
    Add `-Config Debug` to build a Debug DLL or `-Clean` to run the clean target first.
 
-The DLL is placed under `host/tunerpro-plugin/x64/<Config>/PicoROMTunerPro.dll` (e.g.
-`x64/Release`). Copy this into your `TunerPro\Plugins` directory.
+The DLL is placed under `host/tunerpro-plugin/Win32/<Config>/PicoROMTunerPro.dll` (e.g.
+`Win32/Release`). Copy this into your `TunerPro\Plugins` directory.
 
 ## Usage
 
